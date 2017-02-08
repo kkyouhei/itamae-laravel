@@ -2,6 +2,7 @@ env: production
 nginx:
   hostname: prod.example.com
   document_root: /var/www/prod.example.com
+  laravel_root: /var/www/prod.example.com/public
   ssl: true
   ssl_certificate: /etc/nginx/ssl/example.crt;
   ssl_certificate_key:  /etc/nginx/ssl/prod.example.com.2017.key;
