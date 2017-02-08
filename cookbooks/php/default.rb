@@ -8,6 +8,12 @@ package 'php-fpm php-mcrypt php-xml php-mbstring php-pdo php-mysqlnd php-tokeniz
   action :install
 end
 
+# php-fpm
+PHP_FPM_WWW_CONF = "/etc/php-fpm.d/www.conf"
+remote_file PHP_FPM_WWW_CONF do
+  source "./files/etc/php-fpm.d/www.conf"
+end
+
 service "php-fpm" do
   action [:enable, :start]
 end
