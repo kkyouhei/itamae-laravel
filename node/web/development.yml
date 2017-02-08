@@ -3,5 +3,5 @@ nginx:
   server_name: _
   document_root: /var/www/dev.example.com
   ssl: false
-  ssl_certificate: /etc/nginx/ssl/example.crt;
-  ssl_certificate_key: /etc/nginx/ssl/dev.example.com.key;
+  ssl_certificate: /etc/nginx/ssl/example.crt
+  ssl_certificate_key: /etc/nginx/ssl/dev.example.com.key
