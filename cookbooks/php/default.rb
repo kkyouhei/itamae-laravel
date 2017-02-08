@@ -14,6 +14,14 @@ remote_file PHP_FPM_WWW_CONF do
   source "./files/etc/php-fpm.d/www.conf"
 end
 
+PHP_FPM_LOG_ROTATE = "/etc/logrotate.d/php-fpm"
+remote_file PHP_FPM_LOG_ROTATE do
+  owner "root"
+  group "root"
+  mode "755"
+  source "./files/etc/logrotate.d/php-fpm"
+end
+
 service "php-fpm" do
   action [:enable, :start]
 end
